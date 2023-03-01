@@ -1,7 +1,10 @@
 import { configureStore, ThunkAction, Action } from "@reduxjs/toolkit";
+import { miceReducer } from "./features/mice/miceSlice";
 
 export const store = configureStore({
-  reducer: {},
+  reducer: {
+    mice: miceReducer,
+  },
 });
 
 export type AppDispatch = typeof store.dispatch;
